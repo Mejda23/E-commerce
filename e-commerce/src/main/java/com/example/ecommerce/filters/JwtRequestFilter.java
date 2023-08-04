@@ -7,7 +7,7 @@ import org.springframework.security.web.authentication.WebAuthenticationDetailsS
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import com.example.ecommerce.service.jwt.UserDetailsServiceImpl;
+import com.example.ecommerce.service.User.UserDetailsServiceImpl;
 import com.example.ecommerce.utils.JwtUtil;
 
 
@@ -37,7 +37,6 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 
         if (authHeader != null && authHeader.startsWith("Bearer ")) {
             jwt = authHeader.substring(7);
-            System.out.println("Majiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiid");
             username = jwtUtil.extractUsername(jwt);
         }
 
@@ -58,4 +57,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         chain.doFilter(request, response);
     }
 
-}
+}/* ce filtre personnalisé (JwtRequestFilter) est utilisé pour intercepter chaque requête entrante dans l'application. 
+Il extrait le jeton JWT de l'en-tête "Authorization", le valide, charge les détails de l'utilisateur et effectue 
+l'authentification en utilisant Spring Security. Cela permet de sécuriser les endpoints 
+de l'application et de protéger les ressources uniquement pour les utilisateurs authentifiés avec des jetons JWT valides.*/

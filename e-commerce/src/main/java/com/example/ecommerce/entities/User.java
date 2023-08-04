@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.example.ecommerce.dto.UserDto;
 import com.example.ecommerce.enums.UserRole;
 
 import lombok.Data;
@@ -20,8 +21,7 @@ public class User {
 	private Long id;
 	private String name;
 	private String Password;
-
-	private String Email;
+	private String email;
 	private UserRole userRole;
 	private byte[] img;
 	public Long getId() {
@@ -42,11 +42,11 @@ public class User {
 	public void setPassword(String password) {
 		Password = password;
 	}
-	public String getEmail() {
-		return Email;
+	public String getemail() {
+		return email;
 	}
-	public void setEmail(String email) {
-		Email = email;
+	public void setemail(String email) {
+		email = email;
 	}
 	public UserRole getUserRole() {
 		return userRole;
@@ -60,6 +60,5 @@ public class User {
 	public void setImg(byte[] img) {
 		this.img = img;
 	}
-	
 	}
 

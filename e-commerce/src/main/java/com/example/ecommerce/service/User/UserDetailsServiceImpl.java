@@ -1,4 +1,4 @@
-package com.example.ecommerce.service.jwt;
+package com.example.ecommerce.service.User;
 
 import java.util.ArrayList;
 
@@ -17,14 +17,14 @@ public class UserDetailsServiceImpl implements UserDetailsService{
 	private UserRepository userRepository;
 	@Override	
     public UserDetails  loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userRepository.findFirstByEmail(username);
+        User user = userRepository.findFirstByemail(username);
         if (user == null)
             throw new UsernameNotFoundException("username " + username
                     + " not found",null);
 
         System.out.println("---------------------> FOUND ------------->"
-                + user.getEmail());
+                + user.getemail());
 
-        return new org.springframework.security.core.userdetails.User(user.getEmail(),user.getPassword(),new ArrayList<>());
+        return new org.springframework.security.core.userdetails.User(user.getemail(),user.getPassword(),new ArrayList<>());
     }
 }
