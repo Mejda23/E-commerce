@@ -46,10 +46,10 @@ public class User {
 		return email;
 	}
 	public void setemail(String email) {
-		email = email;
+		this.email = email;
 	}
 	public UserRole getUserRole() {
-		return userRole;
+		return userRole.USER;
 	}
 	public void setUserRole(UserRole userRole) {
 		this.userRole = userRole;

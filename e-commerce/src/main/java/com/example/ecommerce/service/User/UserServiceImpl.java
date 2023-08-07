@@ -32,8 +32,8 @@ public class UserServiceImpl implements UserService{
 	return userDto;}
 
 	@Override
-	public boolean hasUserWithEmail(String getemail) {
-		return userRepository.findFirstByemail(getemail)!=null;
+	public boolean hasUserWithEmail(String email) {
+		return userRepository.findFirstByemail(email)!=null;
 }
 
 	

@@ -1,4 +1,4 @@
-package com.example.ecommerce.utils;
+package com.example.ecommerce.service.util;
 
 
 import org.springframework.security.core.userdetails.UserDetails;
@@ -17,8 +17,9 @@ import java.util.function.Function;
 
 @Service
 public class JwtUtil {
+	
 
-    private static final String SECRET = "secret";
+    private static final String SECRET = "UijtjtbofybnqmftUijtjtbofybnqmfUijtjtbofybnqmf";
 
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);

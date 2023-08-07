@@ -3,7 +3,6 @@ package com.example.ecommerce.dto;
 public class SignUpDto {
 	private String name;
 	private String Password;
-
 	private String email;
 
 	public String getName() {
@@ -27,6 +26,6 @@ public class SignUpDto {
 	}
 
 	public void setemail(String email) {
-		email = email;
+		this.email = email;
 	}
 }

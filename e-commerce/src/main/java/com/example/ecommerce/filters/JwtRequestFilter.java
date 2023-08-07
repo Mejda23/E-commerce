@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import com.example.ecommerce.service.User.UserDetailsServiceImpl;
-import com.example.ecommerce.utils.JwtUtil;
+import com.example.ecommerce.service.util.JwtUtil;
 
 
 import javax.servlet.FilterChain;

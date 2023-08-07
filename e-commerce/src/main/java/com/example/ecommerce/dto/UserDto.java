@@ -3,12 +3,13 @@ package com.example.ecommerce.dto;
 import com.example.ecommerce.enums.UserRole;
 
 import lombok.Data;
-@Data
+
 public class UserDto {
 	private Long Id;
 	private String name;
 	private String Password;
-
+	private String email;
+	private UserRole userRole;
 	public Long getId() {
 		return Id;
 	}
@@ -31,7 +32,7 @@ public class UserDto {
 		return email;
 	}
 	public void setemail(String email) {
-		email = email;
+		this.email = email;
 	}
 	public UserRole getUserRole() {
 		return userRole;
@@ -39,6 +40,5 @@ public class UserDto {
 	public void setUserRole(UserRole userRole) {
 		this.userRole = userRole;
 	}
-	private String email;
-	private UserRole userRole;
+	
 }

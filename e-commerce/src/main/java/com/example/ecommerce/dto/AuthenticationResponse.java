@@ -1,6 +1,8 @@
 package com.example.ecommerce.dto;
 
-public class AuthenticationResponse {
+import java.io.Serializable;
+
+public class AuthenticationResponse implements Serializable {
 private String jwtToken;
 
 public String getJwtToken() {
@@ -11,5 +13,5 @@ public void setJwtToken(String jwtToken) {
 	this.jwtToken = jwtToken;
 }
 public AuthenticationResponse(String jwt)
-{}
+{this.jwtToken=jwt;}
 }
